@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAPAY</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <header class="text-center shadow phone-hide-display" id="header-html">
+                <div class="w-100 z-1 bg-white rounded">
+                    <img class="img" src="img/header.svg" />
+                </div>
+            </header>
+            <div class="d-flex align-items-center phone-flex-display">
+                <div class="col-11 justify-content-start">
+                    <div class="title-heading">Thẻ ATM / Số tài khoản</div>
+                </div>
+                <div class="col-1 justify-content-end">
+                    <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="back-btn" class="phone-hide-display">
+                <div class="w-100 mt-32 bold-text back-btn">
+                    <button type="button" class="d-inline button-borderless" onclick="backStep()">
+                        <div class="d-inline">
+                            <img class="icon-outline-arrow" src="img/arrow-left.svg" />
+                        </div>
+                        <span class="back-btn-title">Trở lại</span>
+                    </button>
+                </div>
+            </div>
+            <div id="step-flow">
+                <div class="w-100 d-flex justify-content-center frame-1 mt-32">
+                    <div class="position-relative frame-2">
+                        <div class="progress">
+                            <div 
+                                id="progress-bar" 
+                                class="progress-bar" 
+                                role="progressbar" 
+                                aria-valuenow="0" 
+                                aria-valuemin="0" 
+                                aria-valuemax="100"
+                            ></div>
+                        </div>
+                        <div class="position-absolute top-0 start-0 payment-option">
+                            <button 
+                                type="button" 
+                                id="first-step-btn" 
+                                class="translate-middle rounded-pill rounded-pill-size step-number-color"
+                                onclick="loadContent(1)"
+                            >1</button>
+                            <div id="text-first-step" class="text-center text-translate-50">
+                                <p>Chọn phương thức thanh toán</p>
+                            </div>
+                        </div>
+                        <div class="position-absolute top-0 start-50 payment-option">
+                            <button 
+                                type="button" 
+                                id="second-step-btn" 
+                                class="translate-middle rounded-pill rounded-pill-size step-number-color check-current-step"
+                            >2</button>
+                            <div id="text-second-step" class="text-center text-translate-50 text-weight-600">
+                                <p>Nhập thông tin thanh toán</p>
+                            </div>
+                        </div>
+                        <div class="position-absolute top-0 start-100 payment-option">
+                            <button 
+                                type="button" 
+                                id="third-step-btn" 
+                                class="translate-middle rounded-pill rounded-pill-size step-number-color"
+                                onclick="loadContent(3)"
+                            >3</button>
+                            <div id="text-third-step" class="text-center text-translate-50">
+                                <p>Hoàn thành</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="row frame-3 border-30">
+                    <div id="transaction-detail" class="col p-0 phone-hide-display">
+                        <div class="frame-4">
+                            <div class="container">
+                                <h3 class="bold-text text-center">Chi tiết giao dịch</h3>
+                                <div class="w-100 shadow-sm frame-5 border-12 mt-32 form-transaction-detail">
+                                    <div class="pxy-16">
+                                        <div class="row lh-lg">
+                                            <div class="col-5 text-start text-truncate">Nhà cung cấp</div>
+                                            <div class="col-7 text-end">IMEDIA</div>
+                                        </div>
+                                        <div class="row lh-lg mt-12">
+                                            <div class="col-5 text-start text-truncate">Mã đơn hàng</div>
+                                            <div class="col-7 text-end text-truncate">424050824980771</div>
+                                        </div>
+                                        <div class="row lh-lg mt-12">
+                                            <div class="col-5 text-start">Số tiền</div>
+                                            <div class="col-7 text-end">10.000 VND</div>
+                                        </div>
+                                        <div class="row lh-lg mt-12">
+                                            <div class="col-5 text-start">Phí</div>
+                                            <div class="col-7 text-end">480 VND</div>
+                                        </div>
+                                        <div class="row lh-lg mt-12">
+                                            <div class="col-5 text-start">Nội dung</div>
+                                            <div class="col-7 text-end text-truncate">Thanh toán hóa đơn điện gia dụng</div>
+                                        </div>
+                                        <hr>
+                                        <div class="row lh-lg mt-12">
+                                            <div class="col-5 text-start text-truncate">Tổng số tiền</div>
+                                            <div class="col-7 text-end">
+                                                <h4 class="text-danger total_amount">10.480 VND</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shadow-sm frame-5 border-12 mt-32">
+                                    <div class="text-start">
+                                        <div class="p-3 d-flex">
+                                            <img class="img-2" src="img/ticket.svg" />
+                                            <div class="ms-3">Ưu Đãi</div>
+                                            <div class="ms-auto">
+                                                <button type="button" class="button-borderless" data-bs-toggle="modal" data-bs-target="#voucher-modal">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advertisement-card mt-32 mb-3">
+                                    <img src="img/advertisement_card.jpg" class="img-fluid w-100 border-12" alt="Responsive image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="transaction-method" class="col p-0">
+                        <div class="frame-6" id="method_options">
+                            <div class="frame-6" id="atm-payment-process">
+                                <div class="container">
+                                    <div class="d-flex justify-content-center">
+                                        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Thẻ ATM</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Tài khoản ngân hàng</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex align-items-center box-countdown">
+                                        <div>
+                                            <span class="text-start">Giao dịch hết hạn sau</span>
+                                        </div>
+                                        <div class="ms-auto d-flex text-weight-600 text-center">
+                                            <div class="time-box">07</div>
+                                            <div>:</div>
+                                            <div class="time-box">13</div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                            <div class="w-100 frame-5 border-12">
+                                                <div id="visa-card-img" class="text-center">
+                                                    <img src="img/card.svg" alt="card">
+                                                </div>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Chọn ngân hàng</label>
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Số tài khoản</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Số tài khoản">
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Tên chủ tài khoản</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Tên chủ tài khoản">
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Ngày phát hành</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Nhập ngày cấp (MM/YY)">
+                                                    </div>
+                                                    <div class="form-check mt-32">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Lưu thẻ lại để thanh toán lần sau
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="w-100 frame-5 border-12">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Chọn ngân hàng</label>
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Số tài khoản</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Số tài khoản">
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Tên chủ tài khoản</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Tên chủ tài khoản">
+                                                    </div>
+                                                    <div class="form-group mt-32">
+                                                        <label for="exampleFormControlInput1">Ngày phát hành</label>
+                                                        <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="Nhập ngày cấp (MM/YY)">
+                                                    </div>
+                                                    <div class="form-check mt-32">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Lưu thẻ lại để thanh toán lần sau
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-32 phone-hide-display" id="payment-btn">
+                                        <button class="w-100 btn btn-danger btn-lg" type="button">Thanh toán</button>
+                                    </div>
+                                    <div class="mt-32 w-100 fixed-bottom p-3 phone-block-display" id="payment-btn-app">
+                                        <div class="text-center">
+                                            <button class="btn btn-danger btn-lg w-100" type="button">Thanh toán</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-6 visually-hidden" id="QR_method">
+                            <div class="container">
+                                <h3 class="bold-text">Thông tin chuyển khoản</h3>
+                                <div class="d-flex mt-32 box-countdown">
+                                    <div>
+                                        <p class="text-start">Giao dịch hết hạn sau</p>
+                                    </div>
+                                    <div class="ms-auto d-flex text-weight-600">
+                                        <div class="time-box">07</div>
+                                        <div>:</div>
+                                        <div class="time-box">13</div>
+                                    </div>
+                                </div>
+                                <div class="qr_code_card mt-32">
+                                    <img src="img/QR_Code.jpg" class="img-fluid border-12" alt="Responsive image">
+                                    <div>
+                                        <a>
+                                            <i class="fa-solid fa-file-arrow-down"></i>
+                                            Lưu ảnh
+                                        </a>
+                                        <a class="ml-18">
+                                            <i class="fa-regular fa-circle-question"></i>
+                                            Hướng dẫn
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="w-100 shadow-sm frame-5 border-12 mt-32">
+                                        <div class="pxy-16">
+                                            <div class="row lh-lg">
+                                                <div class="col-4 text-start">Ngân hàng</div>
+                                                <div class="col-8 text-end" id="payment-bank-name">Ngân hàng kỹ thương Việt Nam (TCB)</div>
+                                            </div>
+                                            <div class="row lh-lg mt-12">
+                                                <div class="col-4 text-start">Số tài khoản</div>
+                                                <div class="col-8 text-end" id="payment-account-number">M102PAY9991106640974</div>
+                                            </div>
+                                            <div class="row lh-lg mt-12">
+                                                <div class="col-4 text-start">Tên tài khoản</div>
+                                                <div class="col-8 text-end" id="payment-account-name">PAY TECH</div>
+                                            </div>
+                                            <div class="row lh-lg mt-12">
+                                                <div class="col-4 text-start">Số tiền</div>
+                                                <div class="col-8 text-end">
+                                                    <div class="text-danger amount-transfer">10.000 VND</div>
+                                                    <i class="fa-regular fa-copy copy-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-32">
+                                    <button class="btn w-100 home-back-btn" type="button">Trở về</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Modal Voucher -->
+                    <div class="modal fade" id="voucher-modal" tabindex="-1" aria-labelledby="voucher-modal-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content text-center">
+                                <div class="modal-body d-block">
+                                    <div class="d-flex justify-content-between modal-title">
+                                        <div></div>
+                                        <div>
+                                            <h5 class="title" id="exampleModalLabel">Chọn ưu đãi</h5>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                    <div id="voucher-box" class="mt-16">
+                                        <div class="search-voucher-box">
+                                            <div class="input-group search-box d-flex">
+                                                <button class="btn search-icon" type="button" id="search-voucher-btn">
+                                                    <span class="icon"><i class="fa fa-search"></i></span>
+                                                </button>
+                                                <input type="text" class="form-control search-input flex-grow-1" placeholder="Nhập mã ưu đãi">
+                                                <button class="btn btn-danger" type="button" id="search-btn">Áp dụng</button>
+                                            </div>
+                                        </div>
+                                        <div class="d-block voucher-blank-box">
+                                            <img src="img/voucher_blank.jpg" class="img-fluid border-12 voucher-blank" alt="Responsive image">
+                                        </div>
+                                        <div class="mt-24 accept-vouchers-box">
+                                            <button class="btn btn-danger accept-vouchers" type="button">Đồng ý</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="index.js" ></script> -->
+</body>
+</html>

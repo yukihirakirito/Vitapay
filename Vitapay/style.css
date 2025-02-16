@@ -1,0 +1,824 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/* @font-face {
+    font-family: "Satoshi-Bold";
+    src: url("https://anima-uploads.s3.amazonaws.com/projects/62fe21e7f2f27787f05ba142/fonts/satoshi-variable.ttf")
+        format("truetype");
+} */
+#header img {
+  width: 203px;
+  height: 41px;
+}
+#header-html {
+  padding: 22px 0px;
+}
+.width-50{
+  width: 50%;
+}
+.width-100{
+  width: 100%;
+}
+.frame-1 {
+  height: 67px;
+}
+.frame-2 {
+  width: 40%;
+}
+.frame-3 {
+  height: auto;
+  margin-bottom: 120px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.frame-4 {
+  height: 100%;
+  padding: 0px !important;
+  background-color: #fdf6f6;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.frame-5 {
+  padding: 0px !important;
+  background-color: #ffff;
+}
+.frame-6 {
+  padding: 0px !important;
+  background-color: #ffff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.mt-36 {
+  margin-top: 36px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.ml-8 {
+  margin-left: 8px !important;
+}
+.ml-18 {
+  margin-left: 18px;
+}
+.mx-16 {
+  margin: 0px 16px;
+}
+.p-0 {
+  padding: 0px;
+}
+.pt-36 {
+  padding-top: 36px !important;
+}
+.px-40 {
+  padding: 0px 40px;
+}
+.px-50 {
+  padding: 0 50px;
+}
+.pxy-16 {
+  padding: 16px 16px;
+}
+.pxy-24 {
+  padding: 24px 24px;
+}
+.border-8 {
+  border-radius: 8px;
+}
+.border-12 {
+  border-radius: 12px;
+}
+.border-16 {
+  border-radius: 16px;
+}
+.border-30 {
+  border-radius: 30px !important;
+}
+#content {
+  margin-top: 24px;
+}
+.card-option {
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid;
+  border-color: rgba(245, 245, 245, 1);
+  border-radius: 8px;
+}
+.card-option .img-account-save{
+  width: 32px;
+  height: 23px;
+}
+.payment-option {
+  width: 9rem;
+}
+.text-translate-50 {
+  transform: translate(-50%,-20%)
+}
+.rounded-pill-size {
+  width: 30px; 
+  height:30px;
+}
+.progress {
+  height: 1px;
+}
+.progress-bar-length{
+  width: 0%;
+}
+.bold-text {
+  font-weight: 600;
+}
+.form-check-input-custom {
+  width: 22px;
+  height: 22px;
+  border: 1.56px solid !important;
+  border-color: #9DA4AE !important;
+}
+.circle-check {
+  margin-top: 42px;
+  padding: 0px;
+  color: #34C759;
+  font-size: 110px;
+}
+.status-message {
+  font-size: 24px;
+  font-weight: 700;
+}
+.paid-detail {
+  display: inline-block;
+  width: 80%;
+  max-width: 520px;
+  height: auto;
+}
+.home-back-btn {
+  display: inline-block;
+  width: 80%;
+  max-width: 520px;
+  height: 48px;
+  background-color: #F3F4F6;
+  font-weight: 700;
+}
+.home-back-btn:hover {
+  background-color: #eeeded;
+}
+.button-borderless {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.step-number-color {
+  border: none;
+  background-color: #EEEEEE;
+}
+.text-weight-600 {
+  font-weight: 600;
+}
+.check-current-step {
+  background-color: #CA1820 !important;
+  color: white;
+}
+.qr_code_card {
+  display: inline-block;
+  width: 100%;
+  height: 230px;
+}
+.qr_code_card a {
+  text-decoration: none !important;
+  color: #093F7D !important;
+  cursor: pointer;
+  margin: 0px 15px;
+}
+.qr_code_card a img{
+  width: 16px;
+}
+.box-countdown {
+  font-size: 16px !important;
+  border-radius: 12px;
+  margin: auto;
+}
+.time-box {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #000000;
+  color: #ffff;
+  border-radius: 3px;
+  margin: 0px 2px;
+}
+.amount-transfer {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+}
+.copy-icon {
+  color: #35C75A;
+}
+#saved-acc-vertical-preview {
+  display: block;
+}
+#saved-acc-horizontal-preview {
+  display: none;
+}
+#voucher-modal .modal-content,
+#voucher-modal-detail .modal-content {
+  width: 100%;
+  max-width: 495px;
+  height: auto;
+  border-radius: 30px;
+  background-color: #F6F6F6;
+  padding-bottom: 16px;
+}
+#voucher-modal .modal-body,
+#voucher-modal-detail .modal-body {
+  padding: 16px 20px;
+}
+#voucher-modal #voucher-box,
+#voucher-modal-detail #voucher-box {
+  padding: 0 20px;
+}
+#voucher-modal .title,
+#voucher-modal-detail .title{
+  width: 100%;
+  height: 34px;
+  font-size: 34px;
+}
+
+#voucher-modal .search-voucher-box{
+  width: 100%;
+  height: 52px;
+  padding: 8px 16px;
+  background-color: #ffff;
+}
+
+#voucher-modal .search-box {
+  width: 100%;
+  height: 36px;
+}
+#voucher-modal .search-icon {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-right: 0px;
+  background-color: #F3F4F6;
+}
+#voucher-modal .search-input {
+  border-left: 0px;
+  background-color: #F3F4F6;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+#voucher-modal .search-icon:hover {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-right: 0px;
+  background-color: #F3F4F6;
+}
+#voucher-modal .search-btn {
+  display: inline-block;
+}
+#search-btn {
+  border-radius: 8px;
+  margin-left: 8px !important;
+}
+#voucher-modal .voucher-blank-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#voucher-modal .voucher-blank {
+  width: 185px;
+  height: 160px;
+}
+#voucher-modal .voucher-blank-box {
+  padding: 8px 16px;
+}
+#voucher-modal .accept-vouchers {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+#accounts-modal .modal-content {
+  max-width: 600px;
+  height: auto;
+  padding: 32px 40px;
+  border-radius: 30px;
+}
+#accounts-modal .modal-body {
+  padding: 0px;
+}
+#accounts-modal .account-item {
+  border: 0px !important;
+}
+#accounts-modal .logo-option-account {
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+}
+#accounts-modal .all-save-account-body ol {
+  margin-top: 16px;
+  max-height: 136px;
+}
+#accounts-modal .all-save-account-body .account-item {
+  height: 52px;
+}
+#accounts-modal .all-save-account-body hr {
+  color: #b9b9b9;
+  margin: 0px;
+  padding: 0px;
+}
+#accounts-modal .btn {
+  width: 80%;
+  max-width: 340px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 16px;
+  border: 1px solid #DEDEDE;
+  background-color: #F3F4F6;
+}
+#accounts-modal .dropdown-toggle::after {
+  content: none;
+}
+
+#accounts-modal .all-save-account-body .account-item .account-option-action {
+  padding: 0px;
+  border-radius: 6px;
+  background-color: #F6F6F6;
+}
+#accounts-modal .all-save-account-body .account-item .account-option-action .dropdown-item {
+  padding: 8px;
+}
+#accounts-modal .all-save-account-body .account-item .account-option-action .dropdown-item:focus, .dropdown-item:hover {
+  background-color: #ffff;
+}
+#visa-card-img {
+  margin: 32px 0px;
+}
+#visa-card-img img {
+  /* width: 343px;
+  height: 200px;
+  border-radius: 30px; */
+  width: 80%;
+}
+#add-visa-card .fa-circle-info {
+  color: #d9d9d9;
+  font-size: 14px;
+}
+.form-check-input:checked {
+  background-color: #f14410;
+  border-color: #f14410;
+}
+#vita-login {
+  width: 203px;
+  height: 41px;
+} 
+#vita-login .img{
+  width: 100%;
+  height: 100%;
+} 
+#vitapay-modal input {
+  height: 48px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-left: none;
+}
+.otp-modal .icon_box_input {
+  height: 48px;
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  background-color: transparent;
+  border-right: none;
+  color: #7d7d7dec;
+}
+.otp-modal input {
+  height: 48px;
+  border-left: none;
+  border-right: none;
+}
+.box_input_left {
+  height: 48px;
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  background-color: transparent;
+  border-right: none;
+  color: #7d7d7dec;
+}
+.box_input_right {
+  height: 48px;
+  border: 1px solid #dee2e6;
+  border-top-right-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  background-color: transparent;
+  border-left: none;
+  line-height: 48px;
+}
+#otp-modal-2 .box_input_right,
+#otp-modal-3 .box_input_right {
+  padding-right: 12px;
+}
+.otp-modal .otp-icon {
+  width: 25px;
+  height: 25px;
+}
+.otp-modal input {
+  padding-left: 0px;
+}
+#atm-payment-process ul {
+  width: 80%;
+  height: auto;
+  padding: 4px;
+  background-color: #F6EFEE;
+  border-radius: 8px;
+}
+#atm-payment-process ul>li {
+  width: 50%;
+  height: auto;
+  font-size: 16px;
+}
+#atm-payment-process ul>li button{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+#payment-loading .loading-img {
+  width: 80px;
+  color:#FF7A00;
+}
+#payment-loading .message {
+  color:#FF7A00;
+  margin-top: 22px;
+}
+.total_amount{
+  font-weight: 700;
+}
+#voucher-list {
+  background-color: #F6F6F6;
+}
+#voucher-list .list-group-item {
+  border-radius: 12px;
+  padding: 0px;
+  background-color: #F6F6F6;
+  border: 0px;
+}
+#voucher-list .list-group-item .img-box {
+  height: 98px;
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-right: 1px #F6F6F6 dashed;
+}
+#voucher-list .list-group-item .voucher-description {
+  padding-left: 12px;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  height: 98px;
+}
+#voucher-list .radio-select {
+  padding: 20px 5px 0px 0px !important;
+  height: 98px;
+  padding: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #ffffff;
+}
+#voucher-list .radio-select button:hover{
+  text-decoration: underline;
+  text-decoration-color:#2E90FA;
+  color: #2E90FA;
+}
+#voucher-list .radio-select .button-borderless{
+  padding: 0px;
+}
+#voucher-list .list-group-item .img-box {
+  background-image: radial-gradient(circle at top left, transparent 0, #ffffff 6px), 
+  radial-gradient(circle at top right, transparent 6px, #ffffff 6px), 
+  radial-gradient(circle at bottom left, transparent 0, #ffffff 6px), 
+  radial-gradient(circle at bottom right, transparent 6px, #ffffff 6px);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom left, bottom right;
+}
+#voucher-list .list-group-item .voucher-description {
+  background-image: radial-gradient(circle at top left, transparent 6px, #ffffff 6px), 
+  radial-gradient(circle at top right, transparent 0, #ffffff 0px), 
+  radial-gradient(circle at bottom left, transparent 6px, #ffffff 6px), 
+  radial-gradient(circle at bottom right, transparent 0, #ffffff 0px);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom left, bottom right;
+}
+
+#voucher-list .list-group-item .img-box,
+#voucher-list .list-group-item .voucher-description {
+  background-repeat: no-repeat;
+}
+#voucher-list .disabled-voucher .img-box {
+  background-image: radial-gradient(circle at top left, transparent 0, #D9D9D9 6px), 
+  radial-gradient(circle at top right, transparent 6px, #D9D9D9 6px), 
+  radial-gradient(circle at bottom left, transparent 0, #D9D9D9 6px), 
+  radial-gradient(circle at bottom right, transparent 6px, #D9D9D9 6px);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom left, bottom right;
+  cursor: auto;
+}
+
+#voucher-list .disabled-voucher .voucher-description {
+  background-image: radial-gradient(circle at top left, transparent 6px, #D9D9D9 6px), 
+  radial-gradient(circle at top right, transparent 0, #D9D9D9 0px), 
+  radial-gradient(circle at bottom left, transparent 6px, #D9D9D9 6px), 
+  radial-gradient(circle at bottom right, transparent 0, #D9D9D9 0px);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom left, bottom right;
+  cursor: auto;
+}
+#voucher-list .disabled-voucher .radio-select {
+  height: 98px;
+  padding: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #D9D9D9;
+}
+.list-group-item img { 
+  width: 100%;
+  border-radius: 8px;
+}
+#content .container {
+  padding: 36px 40px;
+}
+
+.voucher-description-content {
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+.vita-balance-box {
+  font-size: 12px;
+  margin-top: 8px;
+  padding-left: 35px;
+}
+.vita-balance-box button{
+  font-size: 12px;
+  margin-left: 5px;
+  border-radius: 8px;
+  background-color: #CA1820;
+}
+#recharge-modal .modal-header {
+  border-bottom: 0px;
+}
+#recharge-modal .modal-body {
+  padding: 0px;
+}
+#recharge-modal #recharge-options label {
+  border-radius: 16px;
+  border: 2px solid #D9D9D9;
+  /* color: #606060; */
+}
+#recharge-options img,
+#saved-acc-horizontal-preview img {
+  width: 40px;
+  height: 40px;
+}
+#recharge-modal #payment-btn button{
+  font-weight: 700;
+  font-size: 16px;
+  color: #7b7a7a;
+  background-color: #d9d9d9;
+  border: 0px;
+}
+.phone-flex-display {
+  display: none !important;
+}
+.phone-block-display {
+  display: none !important;
+}
+#pills-profile {
+  margin-top: 32px;
+}
+.shadow-sm {
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.125) !important;
+}
+.title-heading {
+  font-size: 20px !important;
+  font-weight: 700;
+}
+.confirm-btn-group button {
+  height: 40px;
+  border-radius: 12px;
+  font-weight: 700 !important;
+}
+
+#fail-confirm-modal .circle-check {
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 65px !important;
+}
+.close-confirm-modal {
+  padding: 12px 32px;
+  height: 44px !important;
+  border-radius: 12px;
+}
+/* #recharge-modal  */
+@media only screen and (max-width: 767px) {
+  /* For mobile phones: */
+  * {
+    font-size: 14px;
+    font-family: 'Inter';
+
+  }
+  #header {
+    margin-top: 16px;
+    width: 100%;
+  }
+  .frame-3 {
+    box-shadow: none !important;
+  }
+  .frame-4 {
+    background-color: #fafafa;
+  }
+  .mt-32 {
+    margin-top: 24px !important;
+  }
+  .main {
+    position: relative;
+    overflow-y: scroll;
+  }
+  #back-btn {
+    position: absolute;
+  }
+  #back-btn .back-btn-title {
+    display: none;
+  }
+  #back-btn button {
+    padding: 0px !important;
+  }
+  #header-html {
+    box-shadow: none !important;
+  }
+  #content {
+    margin: 0px !important;
+  }
+  #content-atm {
+    margin-top: 16px;
+  }
+  #content .row .col {
+    flex: none;
+  }
+  #step-flow {
+    display: none;
+  }
+  #transaction-detail .form-transaction-detail {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .transaction-method-title {
+    display: none;
+  }
+  .advertisement-card {
+    display: none;
+  }
+  #transaction-method h5 {
+    font-weight: 700 !important;
+  }
+  #accounts-modal .modal-content {
+    max-width: 600px;
+    height: auto;
+    padding: 16px 20px;
+    border-radius: 20px;
+  }
+  .container {
+    padding: 0px 12px !important;
+  }
+  #voucher-modal #voucher-box {
+    padding: 0px;
+  }
+  #saved-acc-horizontal-preview label {
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  #saved-acc-vertical-preview {
+    display: none;
+  }
+  #saved-acc-horizontal-preview {
+    display: block;
+  }
+  #payment-btn-app{
+    bottom: 0%;
+    padding: 10px 0px;
+    background-color: #ffff;
+    z-index: 1;
+  }
+  #payment-btn-app .total_amount {
+    font-weight: 700 !important;
+    font-size: 17px;
+  }
+  #payment-btn-app button {
+    height: 50px;
+    border-radius: 16px;
+    font-weight: 700 !important;
+  }
+  #payment-btn-app .inline-btn {
+    width: 160px;
+  }
+  .phone-hide-display {
+    display: none !important;
+  }
+  .phone-flex-display {
+    display: flex !important;
+  }
+  .phone-block-display {
+    display: block !important;
+  }
+  #pills-tab {
+    margin-top: 16px;
+  }
+  #pills-tab {
+    width: 100% !important;
+  }
+  #pills-tab li{
+    font-size: 13px !important;
+  }
+  #pills-tab li button{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #visa-card-img {
+    margin: 16px 0px;
+  }
+  #visa-card-img img{
+    width: 100% !important;
+  }
+  .title-heading {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+  .box-countdown {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.125) !important;
+    padding: 10px;
+    margin-top: 16px;
+  }
+  .box-countdown span{
+    font-size: 16px !important;
+  }
+  #header-html {
+    padding: 0px !important;
+  }
+  #header-html img {
+    width: 135px;
+  }
+  .circle-check {
+    margin: 0px !important;
+    padding: 0px !important;
+    color: #34C759;
+    font-size: 48px !important;
+    width: 48px !important;
+  }
+  .status-message {
+    font-size: 16px;
+  }
+  .paid-detail {
+    width: 100%;
+  }
+  .home-back-btn {
+    display: inline-block ;
+    width: 100% !important;
+    height: 48px;
+    background-color: #F3F4F6;
+    font-weight: 700;
+  }
+  .paid-detail {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.125) !important;
+  }
+  .fa-chevron-left { 
+    font-size: 20px;
+  }
+  #payment-btn-app button {
+    height: 50px;
+    border-radius: 16px;
+    font-weight: 700 !important;
+  }
+  .qr_code_card a {
+    text-decoration: none !important;
+    color: #093F7D !important;
+    cursor: pointer;
+    margin: 0px 5px !important;
+    padding: 0px !important;
+  }
+}
